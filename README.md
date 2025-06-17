@@ -53,8 +53,8 @@ claude --dangerously-skip-permissions
 **新しいターミナルを開いて：**
 ```bash
 # 4人の部下を一括起動
-for i in {0..3}; do 
-  tmux send-keys -t multiagent.$i 'claude --dangerously-skip-permissions' C-m
+for i in {1..4}; do 
+  tmux send-keys -t multiagent:agents.$i 'claude --dangerously-skip-permissions' C-m
 done
 ```
 
